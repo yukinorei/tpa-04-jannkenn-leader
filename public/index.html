@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/prism.css">
+  <link rel="stylesheet" href="/css/jannkenn.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <h1>ジャンケン・リーダーボード</h1>
+
+    <hr>
+
+    <div>
+      <h1 class="jannkenn-title">ジャンケンTIME！</h1>
+      <form id="play-form">
+        <div class="name-container">
+          <input id="name" type="text" autocomplete="off" placeholder="名前" required/>
+        </div>
+        <div class="players">
+          <div id="player" class="player-container">
+            <h1 class="title">You</h1>
+            <div class="played"></div>
+            <div class="choices">
+              <div class="choice" data-choice="r">
+                <i class="far fa-hand-rock"></i>
+              </div>
+              <div class="choice" data-choice="p">
+                <i class="far fa-hand-paper"></i>
+              </div>
+              <div class="choice" data-choice="s">
+                <i class="far fa-hand-scissors"></i>
+              </div>
+            </div>
+          </div>
+          <div id="status"></div>
+          <div id="bot" class="player-container">
+            <h1 class="title">Bot</h1>
+            <div class="played">
+            </div>
+            <div class="choices">
+              <div class="choice bot-choice">
+                ...
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="button-container">
+          <div class="error"></div>
+          <button type="submit" id="play-button">Play!</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="jannkenn-leaderboard">
+      <h1>リーダーボード</h1>
+      <table id="leaderboard">
+        <thead>
+          <tr>
+            <td>Name</td>
+            <td>Wins</td>
+            <td>Losses</td>
+            <td>Ties</td>
+            <td>Win %</td>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+
+    <hr>
+  </div>
+  <script type="module">
+    import { initApp } from '/js/app.js';
+    initApp();
+  </script>
+</body>
+
+</html>

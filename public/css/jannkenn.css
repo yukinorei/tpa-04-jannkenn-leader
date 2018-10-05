@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+.jannkenn-title {
+  text-align: center;
+}
+
+.name-container {
+  text-align: center;
+}
+
+.name-container #name {
+  font-size: 28px;
+}
+
+.players {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.error {
+  color: rgb(238, 105, 95);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#status {
+  width: 85px;
+  height: 85px;
+  border: 2px solid #bbb;
+  display: flex;
+  align-items: center;
+  font-size: 48px;
+  justify-content: center;
+  font-weight: bold;
+}
+
+#status.win {
+  color: rgb(31, 175, 115);
+  background: rgb(196, 236, 220);
+  border: 2px solid rgb(31, 175, 115);
+}
+
+#status.tie {
+  color: rgb(128, 128, 128);
+  background: rgb(221, 221, 221);
+  border: 2px solid rgb(128, 128, 128);
+}
+
+#status.lose {
+  color: rgb(238, 105, 95);
+  background: rgb(252, 232, 231);
+  border: 2px solid rgb(238, 105, 95);
+}
+
+.player-container .played {
+  border: 2px solid #bbb;
+  width: 200px;
+  height: 150px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-container .played i {
+  font-size: 100px;
+}
+
+.player-container .choices {
+  display: flex;
+  justify-content: space-between;
+}
+
+.player-container .title {
+  text-align: center;
+}
+
+.player-container .choice {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #bbb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.player-container .choice.selected {
+  border: 2px solid #91c0ef;
+  background-color: #d7ebff;
+}
+
+.player-container .choice i {
+  font-size: 28px;
+}
+
+.player-container .choices .bot-choice {
+  width: 100%;
+}
+
+.button-container {
+  width: 100%;
+  text-align: center;
+}
+
+#play-button {
+  font-size: 32px;
+}
+
+#leaderboard {
+  width: 100%;
+  min-width: 100%;
+}
+
+#leaderboard thead {
+  background: #ddd;
+}
+
+#leaderboard td:first-child {
+  width: 40%;
+}
+
+#leaderboard td {
+  width: 15%;
+}
+
+#leaderboard tbody td:nth-child(2) {
+  color: rgb(31, 175, 115);
+}
+
+#leaderboard tbody td:nth-child(3) {
+  color: rgb(238, 105, 95);
+}
